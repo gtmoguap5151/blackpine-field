@@ -1,6 +1,7 @@
 # BLACKPINE FIELD — Source of Truth
 
-**This file is the canonical state of the business.** Updated whenever anything changes. Last updated: 2026-10-23 (evening).
+**This file is the canonical state of the business.** Updated whenever anything changes. Last updated: 2026-10-24.
+**Repo of record: github.com/gtmoguap5151/blackpine-field (private)** — the text layer (this file, guides, site source, XABO) is versioned there. Media binaries (product images, hero art, video masters) still live in the local workspace pending migration, so Cloudflare Pages deploys stay on the zip upload until they land.
 
 Brand: BLACKPINE FIELD — "Gear judged under load." Spec-judged verdicts, no fake hands-on claims, FTC disclosure on everything. Rules live in `brand-guide.md`. Logo mark: `brand/blackpine-mark.png` (black pine in amber ring on matte black).
 
