@@ -1,4 +1,6 @@
-# Free Country Card — STAGED, CJ tracked link not yet built
+# Free Country Card — LIVE (deployed 2026-11-18 evening)
+
+**LIVE 2026-11-18 evening:** card deployed to the Hunt shelf after Marmot PreCip with the tracked CJ link — programme ID 5683766 confirmed in CJ Account Manager, Link ID 15820669 ("Evergreen Link for Free Country"), curl-verified HTTP 200 to the live Lanier page. Link: https://www.jdoqocy.com/click-101911619-15820669?url=https%3A%2F%2Ffreecountry.com%2Fproducts%2Fmens-lanier-super-softshell-jacket — Commission discrepancy unresolved (CJ dashboard shows 10%, welcome email said 3%); do not quote either as settled. This file is kept as the card's build record.
 
 **Free Country APPROVED on CJ 2026-11-17, 18:20 ET** (welcome email from
 noreply@cj.com, Gmail 1a1ebcf7124dd3f4): 3% baseline commission, 30-day
