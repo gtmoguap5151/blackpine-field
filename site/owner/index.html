@@ -58,6 +58,7 @@
   <button class="active" data-tab="home">Home</button>
   <button data-tab="store">Store</button>
   <button data-tab="money">Money</button>
+  <button data-tab="christmas">Christmas</button>
   <button data-tab="decide">Decide <span class="dot">4</span></button>
 </nav>
 <main>
@@ -159,6 +160,38 @@
   </div>
 </main>
 
+<!-- ============ CHRISTMAS ============ -->
+<section class="tab" id="tab-christmas">
+  <div class="bignum">
+    <div class="stat"><b id="xmas-days">&mdash;</b><span>days to Christmas (Dec 25)</span></div>
+  </div>
+  <p class="muted" style="margin-bottom:12px;">Seasonal ideas for the holidays. Nothing here is on the store yet &mdash; drafts until you approve them.</p>
+
+  <div class="card">
+    <h2>Christmas Package</h2>
+    <p>A gift bundle built from pieces you already own:</p>
+    <ul>
+      <li>Beginner Firearm Education course &mdash; <b>$49</b></li>
+      <li>Deer Season Playbook &mdash; <b>$19</b></li>
+      <li>A BLACKPINE tee &mdash; <b>$27.99</b></li>
+    </ul>
+    <p style="margin-top:6px;">$95.97 if sold separately. Bundle price: <b>your call</b>.</p>
+    <button class="copybtn" data-copy="Christmas package — bundle the course + playbook + tee. Bundle price: $___">Copy to paste to Xena</button>
+  </div>
+
+  <div class="card">
+    <h2>Christmas Cap</h2>
+    <p>A holiday BLACKPINE cap, printed on demand &mdash; nothing made until someone buys. Logo: the faceted pine.</p>
+    <ul>
+      <li>Yupoong dad cap &mdash; costs <b>$16.12</b> to make</li>
+      <li>Yupoong trucker &mdash; costs <b>$14.30</b> to make</li>
+    </ul>
+    <p style="margin-top:6px;">Your 16-piece line already has 4 caps &mdash; this one is the holiday version. Your price: <b>your call</b>.</p>
+    <p class="muted" style="margin-top:6px;">Print-on-demand takes about a week from order to door, so plan a mid-December cutoff.</p>
+    <button class="copybtn" data-copy="Christmas cap — ___ (dad cap or trucker). Price: $___">Copy to paste to Xena</button>
+  </div>
+</main>
+
 <!-- ============ DECIDE ============ -->
 <section class="tab" id="tab-decide">
   <p class="muted" style="margin-bottom:12px;">Tap a button to copy the order, then paste it to Xena in chat.</p>
@@ -222,6 +255,13 @@
     var now = new Date();
     var days = Math.ceil((bf - new Date(now.getFullYear(), now.getMonth(), now.getDate())) / 86400000);
     document.getElementById('bf-days').textContent = days > 0 ? days : 0;
+  })();
+  // Days to Christmas (Dec 25, 2026)
+  (function() {
+    var xm = new Date(2026, 11, 25);
+    var now = new Date();
+    var days = Math.ceil((xm - new Date(now.getFullYear(), now.getMonth(), now.getDate())) / 86400000);
+    document.getElementById('xmas-days').textContent = days > 0 ? days : 0;
   })();
   // Copy buttons
   document.querySelectorAll('.copybtn').forEach(function(btn) {
