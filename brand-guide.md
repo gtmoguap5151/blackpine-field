@@ -1,7 +1,6 @@
 # BLACKPINE FIELD — Brand Guide
 
 **Name:** BLACKPINE FIELD
-**Tagline:** *Gear judged under load.*
 **Domain:** blackpinefield.com (confirmed available 2026-10-22; purchase pending)
 
 ## Who it's for

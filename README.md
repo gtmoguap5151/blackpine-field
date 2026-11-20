@@ -1,6 +1,6 @@
 # BLACKPINE FIELD
 
-**Gear judged under load.** Outdoor / hiking / camping / survival gear, judged on specs and load ratings — store at [blackpinefield.com](https://blackpinefield.com).
+Outdoor / hiking / camping / survival gear, judged on specs and load ratings — store at [blackpinefield.com](https://blackpinefield.com).
 
 **Start with [STATUS.md](STATUS.md)** — the single source of truth for the business: store state, affiliate network positions, published content, and the XABO product file.
 

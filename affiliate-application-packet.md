@@ -5,7 +5,6 @@ Prepared so applications can be submitted the moment blackpinefield.com is live 
 ## Business identity (paste-ready)
 
 - **Brand:** BLACKPINE FIELD
-- **Tagline:** Gear judged under load.
 - **Website:** https://blackpinefield.com (pending registration + launch)
 - **Business type:** Content publisher — product comparison and review media
 - **Niche:** Outdoors, hiking, camping, survival/preparedness, military/tactical gear

@@ -22,7 +22,7 @@ at first light when the deer move.
 - 3–8s (vest shot): `TideWe ThermCore Heated Vest — $109.99` / `4 heating zones · 10 hrs of heat`
 - 8–13s (jacket shot): `TideWe Inferno Heated Jacket — $154.99` / `Up to 131°F · Next G2 camo`
 - 13–18s (blind shots): `Vis270 Blind $104.99 / Vis360 Blind $139.99` / `See them before they see you`
-- 18–20s: `Full picks + links → blackpinefield.com` / `Gear judged under load.`
+- 18–20s: `Full picks + links → blackpinefield.com`
 
 ## Voiceover (optional, matches beats)
 "Cold November stands end hunts early — unless you pack heat. ThermCore heated
