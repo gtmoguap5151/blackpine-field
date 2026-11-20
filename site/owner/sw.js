@@ -3,7 +3,7 @@
 // registered service worker with a fetch handler before it offers install.
 // Cache-first for the console shell only; scope is /owner/ by location.
 // Bump CACHE_NAME whenever the console files change.
-const CACHE_NAME = "blackpine-owner-v2";
+const CACHE_NAME = "blackpine-owner-v3";
 const SHELL = [
   "./",
   "index.html",
