@@ -3,14 +3,13 @@
 // registered service worker with a fetch handler before it offers install.
 // Cache-first for the console shell only; scope is /owner/ by location.
 // Bump CACHE_NAME whenever the console files change.
-const CACHE_NAME = "blackpine-owner-v3";
+const CACHE_NAME = "blackpine-owner-v4";
 const SHELL = [
   "./",
   "index.html",
   "manifest.json",
   "icon-192.png",
   "icon-512.png",
-  "icon.svg",
 ];
 
 self.addEventListener("install", (event) => {
