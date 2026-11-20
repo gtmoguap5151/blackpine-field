@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blackpine Owner</title>
+<meta name="theme-color" content="#1d3a2d">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Blackpine Owner">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #faf6ef; color: #1a1a1a; line-height: 1.5; padding-bottom: 40px; }
+  header { background: #1d3a2d; color: #f5efe3; padding: 18px 16px 14px; }
+  header h1 { font-size: 20px; letter-spacing: 1px; }
+  header h1 span { color: #d9a441; }
+  header p { font-size: 13px; color: #c9d4c9; margin-top: 2px; }
+  nav { display: flex; position: sticky; top: 0; background: #1d3a2d; border-top: 1px solid #2d5a3d; z-index: 10; }
+  nav button { flex: 1; background: none; border: none; color: #c9d4c9; font-size: 14px; font-weight: 600; padding: 12px 4px; cursor: pointer; border-bottom: 3px solid transparent; }
+  nav button.active { color: #fff; border-bottom-color: #d9a441; }
+  nav button .dot { display: inline-block; background: #c0392b; color: #fff; font-size: 11px; min-width: 18px; height: 18px; line-height: 18px; border-radius: 9px; text-align: center; margin-left: 3px; vertical-align: 1px; }
+  main { padding: 14px 16px; }
+  section.tab { display: none; }
+  section.tab.active { display: block; }
+  .card { background: #fff; border: 1px solid #e5ddcb; border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; }
+  .card h2 { font-size: 15px; color: #1d3a2d; margin-bottom: 8px; }
+  .card h3 { font-size: 14px; margin: 10px 0 4px; }
+  .card p, .card li { font-size: 14px; }
+  .card ul { padding-left: 18px; }
+  .card li { margin-bottom: 4px; }
+  .bignum { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; }
+  .stat { flex: 1 1 40%; background: #fff; border: 1px solid #e5ddcb; border-radius: 10px; padding: 12px; text-align: center; }
+  .stat b { display: block; font-size: 26px; color: #1d3a2d; }
+  .stat span { font-size: 12px; color: #666; }
+  .stat.warn b { color: #b7791f; }
+  .muted { color: #666; font-size: 13px; }
+  .ok { color: #1d7a3d; font-weight: 600; }
+  .warn { color: #b7791f; font-weight: 600; }
+  .red { color: #c0392b; font-weight: 600; }
+  a { color: #1d5a3d; }
+  .decide-item { border-left: 4px solid #c0392b; }
+  .decide-item.done { border-left-color: #1d7a3d; }
+  .copybtn { display: inline-block; margin-top: 8px; background: #1d3a2d; color: #fff; border: none; border-radius: 6px; padding: 9px 14px; font-size: 14px; font-weight: 600; cursor: pointer; }
+  .copybtn:active { background: #2d5a3d; }
+  .hint { background: #fdf6e3; border: 1px solid #e5d9ae; }
+  footer { text-align: center; color: #888; font-size: 12px; padding: 16px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>BLACKPINE <span>FIELD</span> &mdash; Owner Console</h1>
+  <p>Private. Only you can open this page. Last updated Nov 19, 2026.</p>
+</header>
+<nav>
+  <button class="active" data-tab="home">Home</button>
+  <button data-tab="store">Store</button>
+  <button data-tab="money">Money</button>
+  <button data-tab="decide">Decide <span class="dot">4</span></button>
+</nav>
+<main>
+
+<!-- ============ HOME ============ -->
+<section class="tab active" id="tab-home">
+  <div class="bignum">
+    <div class="stat"><b>100</b><span>products on the shelf</span></div>
+    <div class="stat"><b>28</b><span>owned by you</span></div>
+    <div class="stat"><b>72</b><span>affiliate</span></div>
+    <div class="stat"><b>11</b><span>departments</span></div>
+  </div>
+  <div class="bignum">
+    <div class="stat warn"><b>$0</b><span>revenue, ever</span></div>
+    <div class="stat"><b>$0.67</b><span>Stripe balance (your test charge)</span></div>
+    <div class="stat"><b>12</b><span>affiliate clicks, ever</span></div>
+    <div class="stat"><b id="bf-days">&mdash;</b><span>days to Black Friday (Nov 27)</span></div>
+  </div>
+  <div class="card">
+    <h2>Store health</h2>
+    <p><span class="ok">&#10003; Audit batch 1 done Nov 19</span> &mdash; 12 items checked live. Both stale prices fixed, 4 new cards added, Door-Buster link fixed.</p>
+    <p style="margin-top:6px;"><span class="warn">Batches 2+ remain</span> &mdash; about 84 more cards to check before Black Friday.</p>
+    <p style="margin-top:6px;"><span class="warn">Amazon prices need your eyes</span> &mdash; Amazon blocks AI checks. Only a person on a phone can verify them.</p>
+  </div>
+  <div class="card hint">
+    <h2>Add this to your home screen</h2>
+    <p>Open your browser menu and tap <b>Add to Home screen</b>. It opens full-screen, like its own app &mdash; no Muse involved.</p>
+  </div>
+  <div class="card">
+    <h2>Quick links</h2>
+    <ul>
+      <li><a href="https://blackpinefield.com/" target="_blank" rel="noopener">View the store</a></li>
+      <li><a href="https://dashboard.stripe.com/" target="_blank" rel="noopener">Stripe dashboard</a></li>
+      <li><a href="https://www.awin.com/" target="_blank" rel="noopener">Awin</a> &middot; <a href="https://www.cj.com/" target="_blank" rel="noopener">CJ</a> &middot; <a href="https://affiliate-program.amazon.com/" target="_blank" rel="noopener">Amazon Associates</a></li>
+    </ul>
+  </div>
+</main>
+
+<!-- ============ STORE ============ -->
+<section class="tab" id="tab-store">
+  <div class="card">
+    <h2>Your owned line &mdash; 28 products</h2>
+    <ul>
+      <li>Beginner Firearm Education course &mdash; <b>$49</b> (live)</li>
+      <li>Deer Season Playbook &mdash; <b>$19</b> &middot; Course + Playbook bundle &mdash; <b>$59</b></li>
+      <li>10 BLACKPINE tees &mdash; <b>$27.99</b> each</li>
+      <li>16-piece BLACKPINE line &mdash; 3 mugs, 3 hoodies, 4 caps, 3 long sleeves, 3 crewnecks</li>
+      <li>2 GALINYX orbit-G pieces &mdash; tee <b>$27.99</b>, hoodie <b>$54.99</b></li>
+    </ul>
+    <p class="muted" style="margin-top:6px;">Each owned product has its own Stripe link. Nothing is printed until someone buys.</p>
+  </div>
+  <div class="card">
+    <h2>Repairs live Nov 19</h2>
+    <ul>
+      <li>MeoWant SC09 &mdash; <b>$645.99</b> (was $789.99); Black Friday $295.99 with code BF350</li>
+      <li>ALLPOWERS S2000 Pro &mdash; <b>$664.05</b> (was $1,399.00)</li>
+      <li>Marmot PreCip Eco Pro &mdash; <b>$79.99</b> (was $160); only XXL left in Black</li>
+      <li>New cards: ALLPOWERS P1800 <b>$439</b> &middot; Piscifun AlinoX 400 <b>$149.99</b> &middot; TideWe AquaWade <b>$189.99</b> &middot; Kings KC Ultra sale (40% off, ends Nov 25)</li>
+      <li>Door-Buster link fixed &mdash; no longer promises a separate page</li>
+    </ul>
+    <p class="muted" style="margin-top:6px;">Honest note: the 4 new cards use stand-in brand images. Real product photos still needed.</p>
+  </div>
+  <div class="card">
+    <h2>Black Friday shelf</h2>
+    <p>The 10-pick shelf is being rebuilt from verified prices only. Five of the original picks had no card, and three Amazon prices are unverified. See <b>Decide</b> for the revised list.</p>
+    <h3>Countdown reels</h3>
+    <p>One reel a day through Nov 27, on all four channels. Re-check each featured price on its publish day.</p>
+  </div>
+</main>
+
+<!-- ============ MONEY ============ -->
+<section class="tab" id="tab-money">
+  <div class="card">
+    <h2>Stripe</h2>
+    <p>Balance <b>$0.67</b> &mdash; your own $1 test charge, Aug 26. Sales ever: <b>$0</b>.</p>
+    <p class="muted">Checked live Nov 19, 19:36 ET. Southeast Home Service.</p>
+  </div>
+  <div class="card">
+    <h2>Affiliate clicks &mdash; 12 ever, 0 sales</h2>
+    <p>CJ: 4 clicks &middot; Awin: 8 clicks. Last checked Nov 17.</p>
+    <h3>Programs</h3>
+    <ul>
+      <li>Awin publisher 3131873 &middot; CJ CID 8107750 &middot; Amazon Associates tag blackpinefield-20</li>
+      <li>New brands live Nov 19: Xtratuf, Durango Boots, Charbroil, Muck Boot, OpticsPlanet, SilverAnt</li>
+    </ul>
+    <h3>Still pending</h3>
+    <ul>
+      <li><span class="red">Pyramyd Air</span> &mdash; wants your monthly traffic figure before review</li>
+      <li>Jackery US, Practical Preppers (Awin) &middot; Coleman, CanvasCamp (CJ)</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Grants in play</h2>
+    <ul>
+      <li>ShopHand $2,500 + $2,500 services &mdash; submitted Nov 18, winner Dec 15</li>
+      <li>Verizon $10,000 &mdash; submitted Oct 6, decisions by Jan 12, 2027</li>
+      <li>Business Freedom $1,000 &mdash; deadline Dec 31, blocked on your age range</li>
+    </ul>
+  </div>
+</main>
+
+<!-- ============ DECIDE ============ -->
+<section class="tab" id="tab-decide">
+  <p class="muted" style="margin-bottom:12px;">Tap a button to copy the order, then paste it to Xena in chat.</p>
+
+  <div class="card decide-item">
+    <h2>1. Pyramyd Air reply</h2>
+    <p>Scott Tran asked for your <b>average monthly traffic</b> and how Pyramyd Air would be featured before they review the application. Nothing moves until you give the figure.</p>
+    <button class="copybtn" data-copy="Pyramyd Air — my monthly traffic is ___ visitors. Feature plan: ___">Copy to paste to Xena</button>
+  </div>
+
+  <div class="card decide-item">
+    <h2>2. Black Friday shelf &mdash; revised list</h2>
+    <p>Built from verified prices only:</p>
+    <ul>
+      <li>TideWe AquaWade $189.99 (was $279.99)</li>
+      <li>Piscifun AlinoX 400 $149.99 (was $199.99)</li>
+      <li>ALLPOWERS P1800 $439.00 (was $1,059.98)</li>
+      <li>MeoWant SC09 $645.99 &mdash; $295.99 with code BF350</li>
+      <li>Kings KC Ultra sale &mdash; 40% off, ends Nov 25</li>
+    </ul>
+    <button class="copybtn" data-copy="Approve the revised Black Friday shelf — TideWe AquaWade, Piscifun AlinoX 400, ALLPOWERS P1800, MeoWant SC09, Kings KC Ultra sale.">Approve this shelf</button>
+  </div>
+
+  <div class="card decide-item">
+    <h2>3. Audit batch 2</h2>
+    <p>About 84 more cards to check before Black Friday. Batch 1 found 2 stale prices and 5 missing cards.</p>
+    <button class="copybtn" data-copy="Run store audit batch 2">Run batch 2</button>
+  </div>
+
+  <div class="card decide-item">
+    <h2>4. Amazon price re-check</h2>
+    <p>Amazon blocks AI checks, so these five need your eyes on your phone: Anker SOLIX S2000, EcoFlow DELTA 3 Max, YETI Roadie 48, Leatherman Wave Plus, Leatherman FREE K4X.</p>
+    <button class="copybtn" data-copy="Amazon prices checked: Anker $___ EcoFlow $___ YETI $___ Wave Plus $___ K4X $___">Copy the price form</button>
+  </div>
+
+  <div class="card decide-item done">
+    <h2>Already decided</h2>
+    <ul>
+      <li><span class="ok">&#10003;</span> MeoWant SC09 &rarr; $645.99 &mdash; approved Nov 19, live</li>
+      <li><span class="ok">&#10003;</span> ALLPOWERS S2000 Pro &rarr; $664.05 &mdash; approved Nov 19, live</li>
+    </ul>
+  </div>
+</main>
+
+<footer>BLACKPINE FIELD &middot; Owner Console &middot; blackpinefield.com/owner &middot; Not for the public.</footer>
+
+<script>
+  // Tabs
+  document.querySelectorAll('nav button').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('nav button').forEach(function(b) { b.classList.remove('active'); });
+      document.querySelectorAll('section.tab').forEach(function(s) { s.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.getAttribute('data-tab')).classList.add('active');
+      window.scrollTo(0, 0);
+    });
+  });
+  // Days to Black Friday (Nov 27, 2026)
+  (function() {
+    var bf = new Date(2026, 10, 27);
+    var now = new Date();
+    var days = Math.ceil((bf - new Date(now.getFullYear(), now.getMonth(), now.getDate())) / 86400000);
+    document.getElementById('bf-days').textContent = days > 0 ? days : 0;
+  })();
+  // Copy buttons
+  document.querySelectorAll('.copybtn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var text = btn.getAttribute('data-copy');
+      function done() {
+        var old = btn.textContent;
+        btn.textContent = 'Copied ✓ — paste it to Xena';
+        setTimeout(function() { btn.textContent = old; }, 2500);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done).catch(function() { fallback(); });
+      } else { fallback(); }
+      function fallback() {
+        var ta = document.createElement('textarea');
+        ta.value = text; document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(ta); done();
+      }
+    });
+  });
+</script>
+</body>
+</html>
