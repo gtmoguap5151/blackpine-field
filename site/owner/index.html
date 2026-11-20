@@ -19,8 +19,15 @@
   header h1 span { color: #d9a441; }
   header p { font-size: 13px; color: #c9d4c9; margin-top: 2px; }
   nav { display: flex; position: sticky; top: 0; background: #1d3a2d; border-top: 1px solid #2d5a3d; z-index: 10; }
-  nav button { flex: 1; background: none; border: none; color: #c9d4c9; font-size: 14px; font-weight: 600; padding: 12px 4px; cursor: pointer; border-bottom: 3px solid transparent; }
-  nav button.active { color: #fff; border-bottom-color: #d9a441; }
+  nav button { flex: 1; background: none; border: none; color: #c9d4c9; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 12px 4px; cursor: pointer; border-bottom: 3px solid transparent; }
+  nav button.active { color: #fff; border-bottom-color: #d9a441; background: #24483a; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand svg { flex: 0 0 auto; }
+  .brand .tagline { font-size: 11px; letter-spacing: 3px; color: #d9a441; margin-top: 1px; }
+  .bfstrip { background: #1d3a2d; color: #f5efe3; border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #d9a441; }
+  .bfstrip h2 { color: #d9a441; font-size: 15px; margin-bottom: 6px; }
+  .bfstrip p { font-size: 14px; }
+  .bfstrip a { color: #d9a441; }
   nav button .dot { display: inline-block; background: #c0392b; color: #fff; font-size: 11px; min-width: 18px; height: 18px; line-height: 18px; border-radius: 9px; text-align: center; margin-left: 3px; vertical-align: 1px; }
   main { padding: 14px 16px; }
   section.tab { display: none; }
@@ -51,8 +58,14 @@
 </head>
 <body>
 <header>
-  <h1>BLACKPINE <span>FIELD</span> &mdash; Owner Console</h1>
-  <p>Private. Only you can open this page. Last updated Nov 19, 2026.</p>
+  <div class="brand">
+    <svg width="44" height="44" viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" rx="96" fill="#14291f"/><g fill="#f5efe3"><polygon points="256,84 330,210 182,210"/><polygon points="256,168 352,304 160,304"/><polygon points="256,258 372,392 140,392"/></g><g fill="#d9a441"><polygon points="256,84 330,210 256,210"/><polygon points="256,168 352,304 256,304"/><polygon points="256,258 372,392 256,392"/></g><rect x="238" y="392" width="36" height="52" fill="#8a5a2b"/></svg>
+    <div>
+      <h1>BLACKPINE <span>FIELD</span></h1>
+      <p class="tagline">ROOTS RAN DEEP</p>
+      <p>Owner Console &mdash; private. Only you can open this page. Last updated Nov 20, 2026.</p>
+    </div>
+  </div>
 </header>
 <nav>
   <button class="active" data-tab="home">Home</button>
@@ -65,6 +78,11 @@
 
 <!-- ============ HOME ============ -->
 <section class="tab active" id="tab-home">
+  <div class="bfstrip">
+    <h2>BLACK FRIDAY &mdash; 92 DEALS LIVE</h2>
+    <p>The 5-pick shelf is at the top of the store: TideWe AquaWade $189.99, Piscifun AlinoX 400 $149.99, ALLPOWERS P1800 $439, MeoWant SC09 $645.99 (code BF350), Kings KC Ultra 40% off ends Nov 25.</p>
+    <p style="margin-top:6px;"><a href="https://blackpinefield.com/black-friday" target="_blank" rel="noopener">See all 92 deals &rarr;</a></p>
+  </div>
   <div class="bignum">
     <div class="stat"><b>113</b><span>products on the shelf</span></div>
     <div class="stat"><b>28</b><span>owned by you</span></div>
@@ -133,7 +151,7 @@
   <div class="card">
     <h2>Black Friday shelf &mdash; LIVE</h2>
     <p>The 5-pick shelf is at the top of the store: TideWe AquaWade $189.99, Piscifun AlinoX 400 $149.99, ALLPOWERS P1800 $439, MeoWant SC09 $645.99 (BF350 code), Kings KC Ultra 40% off ends Nov 25.</p>
-    <p style="margin-top:6px;">All 62 earnable deals live on the Black Friday page.</p>
+    <p style="margin-top:6px;">All 92 deals live on the Black Friday page &mdash; 62 earnable + 30 new Amazon deals added Nov 20.</p>
     <h3>Countdown reels</h3>
     <p>One reel a day through Nov 27, on all four channels. Three reels re-rendered with corrected prices (Anker $649.99, EcoFlow $759.05, YETI $297.50) &mdash; they go out on their days. tn1day publishes Fri Nov 20.</p>
   </div>
